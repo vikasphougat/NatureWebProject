@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   basic commands
+
+
+1===git init                //initizlize local git repository on laptop as a name of .git folder 
+
+2===git add .    or git add filename     or git add -A  //select all files with dot in the folder and add in .git folder as a local repository 
+
+3==git status          //if you want to check status of working tree
+
+4==git commit -m 'type any msg'       enter      //commit changes in index
+
+5=== git push                  // push local repository  to remote repository like github n other 
+
+6==git pull                   //pull latest changes from remote respository
+
+7==git clone pastelink               // clone repository into a new directory         
+ 
+8== git config --globel user.email 'enter your email'   ///Add email address to before starting project
+
+or 
+
+9==git config --globel user.name 'enter your name'    ///Add email address to before starting project
+
+10== git rm --cached filename       //remove any file from local repository 
+
+
+11==  Add any file name in .gitignore  they will not going to commit 
+ //make .gitignore and log.txt file inside root folder then inside .gitignore file ,type log.txt and save it 
+
+12===git branch branchName        /// to create a branch other then master 
+13==git checkout branchName      //switch branch from master to new one 
+
+14==work on new branch and add files in it ,,commit ur change in new branch 
+   then marge it with master branch with 
+
+   first switch to master branch with 
+
+   git checkout master     //switch to master branch 
+
+   git merge login     //merge all work with master branch 
+
+
+   it will open en editer 
+   press i  // to insert command in editor 
+
+   press esc  then :wq enter
+
+   15= git checkout filename
+     or git checkout -f (for all file to restore)
+           ///it restore the git file to perivous saved once 
+
+    16= git log   //gives history of commit made any anyone
+      
+    git log -p -5 // to see 5 commit out of 1000 commit
+
+    17 =git add -A  // track utracked files then fun below command 
+
+   18==git commit -a -m "adding new file" // adding file and commit 
+
+   19 git rm  filename // remove file from both git staging are and main folder
+
+   git rm --cached filename // remove file from only staging area 
+
+</body>
+</html>
