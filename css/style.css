@@ -1,0 +1,190 @@
+/****** Viki Css RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer; }
+
+figure {
+  margin: 0; }
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+ul, ol, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit; }
+
+p {
+  margin: 0; }
+
+cite {
+  font-style: normal; }
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0; }
+
+/* typograpgy */
+html {
+  /* remeber by default font-size of html is 16px= 1rem
+    always use rem  
+    change the default html pixel that will be equal to 1rem always 
+    if  html font size == 10 px then 10px will be equal to 1rem for all over the website 
+    if html font-size is 1pixel then 1px = 1rem in all over the sheet 
+
+  */
+  /* font-size:10px =62.5%;= 1 rem  */
+  /* use persentage instad of pixal in html font-size */
+  /* for more use way  */
+  font-size: 1px;
+  /*use rem for responsive design   */ }
+
+body {
+  font-family: 'Lato' , sans-serif;
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: 1.3;
+  /* choose your own color for project  */
+  color: #777; }
+
+/* user css setting */
+body {
+  padding: 30rem; }
+
+/* header nasting   */
+.header {
+  height: 95vh;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  /* logo */ }
+  .header__logo-box {
+    position: absolute;
+    top: 40rem;
+    left: 40rem; }
+  .header__logo {
+    height: 35rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 60rem;
+    letter-spacing: 35rem;
+    font-weight: 400;
+    animation: main-header;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; }
+  .heading-primary--sub {
+    display: block;
+    word-spacing: 17rem;
+    font-weight: 700;
+    letter-spacing: 17rem;
+    animation: sub-header 1s ease-in-out forwards; }
+
+/* header -animation */
+@keyframes main-header {
+  0% {
+    opacity: 0;
+    transform: translateX(-100rem); }
+  80% {
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes sub-header {
+  0% {
+    opacity: 0;
+    transform: translateX(100rem); }
+  80% {
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  padding: 15rem 40rem;
+  display: inline-block;
+  border-radius: 100rem;
+  transition: all .2s ease-in-out;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-2rem);
+  box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(-1rem);
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background: #fff;
+  color: #777; }
+  .btn--white::after {
+    background: #FFF; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease-in-out; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn--animated {
+  animation: frombottom 0.5s ease-out 0.75s backwards; }
+
+@keyframes frombottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
